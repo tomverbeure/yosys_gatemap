@@ -1,0 +1,8 @@
+read_verilog top.v
+hierarchy -auto-top
+proc
+techmap
+abc -liberty ./basic_cells.lib
+dfflibmap -info -liberty ./basic_cells.lib
+stat
+write_ilang top.ilang

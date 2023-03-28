@@ -21,6 +21,9 @@ helpful error message:
     ABC: Error: Current library is not available.
     ERROR: Can't open ABC output file `/tmp/yosys-abc-qms7cw/output.blif'.
 
+If you want to map FFs, you'll also models for those. In this example, I have
+only have FF, a simple D FF that doesn't have an asynchronous reset. If your design
+has those, you'll need to add support for those in your cell library as well.
 
 The run the example in this repo, install [Yosys](https://github.com/YosysHQ/yosys), then
 run the following command:

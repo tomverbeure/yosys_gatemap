@@ -38,7 +38,7 @@ library(basic_cells){
     }
 
     cell (DFF) {
-        area : 50;
+        area : 8;
         pin(D) {
             direction : input;
         }	
@@ -46,12 +46,13 @@ library(basic_cells){
             direction : input;
             clock : true;
         }
-        ff(Q) {
+        ff("Q") {
             clocked_on : "CK";
             next_state : "D";
         }
         pin(Q) {
             direction : output;
+            function: "Q";
         }
     }
 }

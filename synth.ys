@@ -2,7 +2,9 @@ read_verilog top.v
 hierarchy -auto-top
 proc
 techmap
+clean
+dfflibmap -liberty ./basic_cells.lib
 abc -liberty ./basic_cells.lib
-dfflibmap -info -liberty ./basic_cells.lib
+clean
 stat
-write_ilang top.ilang
+write_verilog top.gates.v
